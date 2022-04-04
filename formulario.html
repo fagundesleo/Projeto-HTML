@@ -13,20 +13,20 @@
             <th>Formulário de Cadastro</th>
         </tr>
         <tr>
-            <td><label for="fname">Nome:</label></td>
-            <td><input type="text" id="fname" name="fname"></td>
+            <td><label for="nome">Nome:</label></td>
+            <td><input type="text" id="nome" name="nome"></td>
         </tr>
         <tr>
-            <td><label for="fname">Sobrenome:</label></td>
-            <td><input type="text" id="fname" name="fname"></td>
+            <td><label for="sobrenome">Sobrenome:</label></td>
+            <td><input type="text" id="sobrenome" name="sobrenome"></td>
         </tr>
         <tr>
-            <td><label for="fname">Endereço:</label></td>
+            <td><label for="endereco">Endereço:</label></td>
             <td><textarea name="message" rows="5" cols="20"></textarea>
             </td>
         </tr>
         <tr>
-            <td><label for="fname">Disciplinas:</label></td>
+            <td><label for="disciplinas">Disciplinas:</label></td>
             <td><input type="checkbox" id="disciplina1" name="disciplina1" value="Programacao">
             <label for="disciplina1">Programação</label><br>
             <input type="checkbox" id="disciplina2" name="disciplina2" value="Logica">
@@ -37,6 +37,27 @@
             <label for="disciplina4">Banco de Dados</label><br>
             <input type="checkbox" id="disciplina5" name="disciplina5" value="Mobile">
             <label for="disciplina5">Mobile</label><br></td>
+        </tr>
+        <tr>
+            <td><label for="gender">Gênero:</label></td>
+            <td><input type="radio" id="masculino" name="gender" value="Masculino">
+                <label for="masculino">Masculino</label><br>
+                <input type="radio" id="feminino" name="gender" value="Feminino">
+                <label for="feminino">Feminino</label><br>
+                <input type="radio" id="naoinformar" name="gender" value="NaoInformar">
+                <label for="naoinformar">Não Informar</label><br></td>
+        </tr>
+        <tr>
+            <td><label for="datanascimento">Data de nascimento:</label></td>
+            <td><input type="date" id="datanascimento" name="DataNascimento"></td>
+        </tr>
+        <tr>
+            <td><label for="fotoperfil">Foto de perfil:</label></td>
+            <td><input type="file" id="fotodeperfil" name="FotoPerfil"></td><br>
+        </tr>
+        <tr>
+            <td><input type="submit"></td>
+            <td><input type="reset"></td>
         </tr>
     </table>
 </form>
