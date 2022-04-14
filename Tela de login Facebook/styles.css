@@ -18,14 +18,14 @@ body {
     height: 100%;
     display: flex;
     justify-content:space-around;
-    align-items:center;
+    align-items: center;
     overflow: hidden;
 }
 
 .left .right, form{
     display: flex;
-    align-content:center;
-    justify-content:center;
+    align-content: center;
+    justify-content: center;
     flex-direction:column;
 }
 
@@ -73,7 +73,7 @@ form input{
     font-size: 16px;
 }
 
-form input: focus{
+form input:focus{
     border: 1px solid #1877f2;
 }
 
@@ -84,7 +84,7 @@ form input: focus{
     text-decoration: none;
     width: 100%;
     border-radius: 5px;
-    color:white
+    color:white;
     font-family: 'Arial';
     font-weight: 700;
     transition: 0.5s;
