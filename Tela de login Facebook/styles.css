@@ -24,14 +24,15 @@ body {
 
 .left .right, form{
     display: flex;
-    align-content: center;
-    justify-content: center;
+    align-content:center;
+    justify-content:center;
     flex-direction:column;
 }
 
 .left{
-    width:500px;
-    align-items: flex-start;
+    width: 500px;
+    align-items:flex-start;
+    position:relative;
 }
 
 /*todas as img da classe left terão esse estilo */
@@ -41,12 +42,12 @@ body {
 
 /*todos os parágrafos da classe left terão esse estilo */
 .left p{
-    font-size: 30px;
+    font-size:30px;
     color: #1c1e21;
     height: 200px;
     font-family: 'Roboto Condensed', sans-serif;
-    position: relative;
-    left: 27px;
+    position:relative;
+    left:27px;
 }
 
 .right{
