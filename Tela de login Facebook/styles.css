@@ -4,12 +4,12 @@
     box-sizing:border-box;
 }
 
-body {
+body{
     display:flex;
     justify-content:center;
     align-items:center;
     width:100%;
-    height:100%;
+    height:100vh;
     background-color: #f0f2f5;
 }
 
@@ -27,12 +27,12 @@ body {
     align-content:center;
     justify-content:center;
     flex-direction:column;
+    align-items: center;
 }
 
 .left{
     width: 500px;
     align-items:flex-start;
-    position:relative;
 }
 
 /*todas as img da classe left terão esse estilo */
@@ -101,6 +101,15 @@ form input:focus{
     color: #1877f2;
     font-family: 'Arial';
     font-size: 14px;
+    align-items: center;
+}
+
+.right__sign-up{
+    padding-top: 20px;
+    border-top: 1px solid #999;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .right__signupBtn{
@@ -123,4 +132,67 @@ form input:focus{
 .right p{
     font-size:15px;
     font-family: 'Arial';
+}
+
+@media(max-width:950px){
+    .container{
+        flex-direction: column;
+    }
+
+
+    .left{
+        width: 400px;
+        align-content: center;
+        align-items: center;
+        
+    }
+
+    .left p{
+        height: 75px;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width:500px){
+    .right{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form{
+        width:350px;
+        align-content:center;
+        align-items: center;
+    }
+
+    .left p{
+        height: 100%;
+        font-size: 20px;
+    }
+}
+
+@media (max-width:370px){
+    .right{
+        display:flex;
+        justify-content: center;
+    }
+
+    .left{
+        display:flex;
+        justify-content: center;
+    }
+
+    .left img{
+        height:95px;
+    }
+
+    .left p, .right p{
+        display: none;
+    }
+
+    form input, .right__forget, .right__loginBtn, .right__sign-upBtn{
+        font-size:12;
+    }
 }
