@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+        <h1 id="title">
+            Olá Mundo!
+        </h1>
+        <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sit quia ab aut fugit molestias voluptas praesentium numquam explicabo exercitationem molestiae, placeat delectus laboriosam, eligendi dolorem qui, iste architecto omnis.</p>
+    </div>
+    <button type="button" onclick="replace()">Substituir</button>
+    <script>
+        function replace(){
+            var parent = document.getElementById("main");
+            var old_text = document.getElementById("text");
+            
+            //criando um novo elemento de parágrafo
+            var new_text = document.createElement("p");
+            
+            //criando um novo texto para o parágrafo
+            var new_content = document.createTextNode("Mussum aprovis suco de cevadis")
+            
+            //inserindo o texto criado ao elemento parágrafo
+            new_text.appendChild(new_content)
+            
+            //substituindo o texto antigo pelo texto novo
+            parent.replaceChild(new_text, old_text)
+        }
+    </script>
+</body>
+</html>

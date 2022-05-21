@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="email" placeholder="Email" >
+        <input type="password" id="senha" placeholder="Senha" >
+        <input type="submit" value="Login" onclick="validaLogin()">
+        <p id="acesso"></p>
+    </div>
+</body>
+<script>
+function validaLogin(){
+
+        try {
+            
+            let email = document.getElementById("email").value
+            let senha = document.getElementById("senha").value
+
+            let emailSistema = "cassiano@dio.me"
+            let senhaDoSistema = "123456"
+
+            if(!senha || !email){
+
+                let erroLogin = new ErroLogin("ErroLogin","Campos em branco não são válidos")
+
+                throw erroLogin
+            }
+
+            if (senha == senhaDoSistema && email == emailSistema) {
+                
+                document.getElementById("acesso").innerHTML = "Acesso autorizado!"
+
+            } else {
+                
+                let erroLogin = new ErroLogin("ErroLogin","Credenciais do usuário estão incorretas!")
+
+                throw erroLogin
+            }
+
+
+        } catch (erro) {
+
+            document.getElementById("acesso").innerHTML = erro.message
+
+        }
+    }
+</script>
+</html>

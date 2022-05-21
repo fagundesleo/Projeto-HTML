@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca CEP Dinâmico</title>
+</head>
+<body>
+    <div id="container">
+        <div id="form">
+            <input type="text" id="cep" placeholder="CEP">
+            <input type="submit" id="btn_cep" onclick="getCep()" value="Pesquisar">
+            <p id="address"></p>
+            <p id="city"></p>
+            <p id="district"></p>
+        </div>
+        <p id="error"></p>
+    </div>
+</body>
+<script>
+    const getCep = async () => {
+
+const cep = document.getElementById("cep").value
+
+const address = document.getElementById("address")
+const city = document.getElementById("city")
+const district = document.getElementById("district")
+
+const viacep_url = `https://viacep.com.br/ws/${cep}/json/`
+
+console.log(viacep_url)
+
+try {
+    
+    const response = await fetch(viacep_url)
+    const json_response = await response.json()
+    console.log(json_response)
+    address.innerHTML = json_response.logradouro
+    city.innerHTML = json_response.localidade
+    district.innerHTML = json_response.bairro
+
+} catch (error) {
+    document.getElementById("error").innerHTML = error.message
+}
+
+}
+
+</script>
+</html>
