@@ -1,0 +1,355 @@
+html, body {
+    height: 100%;
+    font-family: Lato, Helvetica, Arial;
+    color: rgb(35, 35, 51);
+    background-color: rgb(57, 57, 77);
+}
+
+html {
+    font-size: 62,5%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: rgb(51, 51, 51);
+    background-color: rgb(255, 255, 255);
+    margin: 0 px;
+    display: block;
+}
+
+div {
+    display: block;
+}
+
+#skiptocontent {
+    text-align: left;
+    z-index: 9999;
+}
+
+#skiptocontent a {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    width: 1px;
+    z-index: 9999;
+    position: absolute;
+    left: 0px;
+    color: white;
+    border-bottom-right-radius: 8px;
+    overflow: hidden;
+    padding: 6px;
+    background: transparent;
+    transition: top 1s ease-out 0s, background 1s linear 0s;
+}
+
+#content_container {
+    padding-top: 0;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    min-height: 624px;
+}
+
+.mini-layout-body {
+    margin: 0px auto;
+}
+
+#meeting_register_container {
+    margin: 0 auto;
+    max-width: 900px;
+    min-height: 600px;
+    padding-top: 20px;
+}
+
+h1:first-child {
+    margin-top: 0px;
+}
+
+.offscreen {
+    position: absolute;
+    font-size: 1px;
+    left: -9999px;
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#meeting_register_container .page-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-header {
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #232333;
+    text-align: center;
+}
+
+#meeting_register_container .form-group {
+    margin-left: 20px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+#meeting_register_container .ico-width {
+    width: 32px;
+}
+
+#meeting_register_container .share-ico {
+    display: inline-block;
+    height: 46px;
+    line-height: 46px;
+    vertical-align: middle;
+}
+
+span {
+    text-align: center;
+    margin-right: 20px;
+    display: inline-block;
+    height: 46px;
+    line-height: 46px;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+}
+
+a {
+    text-decoration: none;
+    color: #0e71eb;
+}
+
+.webinar_topic{
+    display: table-cell;
+    width: 670px;
+    text-align: left;
+}
+
+#meeting_register_container .form-group {
+    margin-left: 20px;
+}
+
+#meeting_register_container .horizontal .control-label {
+    float: left;
+    width: 80px;
+    text-align: left;
+}
+
+.webinar_topic label {
+    font-weight: 600;
+}
+
+#meeting_register_container .horizontal .controls {
+    margin-left: 100px;
+}
+
+#meeting_register_container .form-group {
+    margin-left: 20px;
+}
+
+#switch_timezone {
+    color: rgb(14, 113, 235);
+    background: transparent;
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+}
+
+.span1 {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 230px;
+}
+
+#questions_container {
+    position: relative;
+}
+
+#meeting_register_container .row {
+    margin: 0 0;
+}
+
+.col-md-6 {
+    width: 50%;
+    float: left;
+}
+
+label {
+    font-weight: normal;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+#meeting_register_container i {
+    color: #E02828;
+    margin-right: 5px;
+}
+
+#meeting_register_container a.submit{
+    width: 200px;
+}
+
+.btn .btn-lg, .btn-group-lg {
+    line-height: 38px;
+    font-size: 18px;
+    padding: 5px 35px;
+}
+
+.btn-primary {
+    background-color: rgb(14, 113, 235);
+    color: rgb(255, 255, 255);
+    border-color: rgb(14, 113, 235);
+}
+
+.btn {
+    border-radius: 8px;
+    display: inline-block;
+    margin-bottom: 0px;
+    font-weight: normal;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+    border-width: 1px;
+    border-style: solid;
+    border-image: initial;
+}
+
+
+
+/* .form-group {
+    margin-left: 20px;
+    margin-bottom: 24px;
+    box-sizing: border-box;
+    display: block;
+}
+
+label {
+    float: left;
+    width: 80px;
+    text-align: left;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.controls {
+    margin-left: 100px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    max-height: 120px;
+    width: 240px;
+    margin-right: 4px;
+    padding-top: 6px;
+    display: inline-block;
+}
+
+b, strong {
+    font-weight: 600;
+}
+
+.control-label {
+    float: left;
+    width: 80px;
+    text-align: left;
+}
+
+#registerForAll {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: 16px 18px;
+    background-position: 98% 50%;
+}
+
+#switch_timezone {
+    background: transparent;
+    border: 0;
+    color: #0e71eb;
+    cursor: pointer;
+    text-transform: none;
+    overflow: visible;
+}
+
+#questions_container {
+    position: relative;
+}
+
+.row {
+    margin: 0 0;
+}
+
+.form-group{
+    margin-left: 20px;
+    margin-bottom: 24px;
+}
+
+label {
+    font-weight: normal;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+i {
+    color: #e02828;
+    margin-right: 5px;
+}
+
+.form-control {
+    color: #232333;
+    border-radius: 8px;
+    box-shadow: none;
+    height: 32px;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-color: #babacc;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    font-size: 14px;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    transition: border-color
+        ease-in-out .15s,box-shadow
+        ease-in-out .15s;
+}
+
+.btn .btn-lg {
+    line-height: 38px;
+    padding: 5px 35px;
+    font-size: 18px;
+}
+
+.btn-primary {
+    background-color: #0e71eb;
+    border-color: #0e71eb;
+    color: #fff;
+}
+
+.btn {
+    border-radius: 8px;
+    padding: 5px 16px;
+}
+
+.btn-lg{
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 6px;
+} */

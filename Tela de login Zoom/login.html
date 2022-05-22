@@ -4,71 +4,152 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
     <title>Inscrição na Reunião - Zoom</title>
 </head>
-<body>
-    <div class="container">
-        <div class="header sign-in">
-        <h2>Inscrição na Reunião</h2>
-    </div>
-    <div class="socialmedia">
-        <span>
-            <img src="./img/facebook-logo.png" alt="Facebook Icon">
-            <img src="./img/twitter--v2.png" alt="Twitter Icon">
-            <img src="./img/linkedin-logo.png" alt="LinkedIn Icon">
-            <img src="./img/outlook.png" alt="Outlook Icon">
-        </span>
-    </div>
-    <hr class="solid">
-    <div class="webinar_topic">
-        <div class="form-group">
-            <label for="" class="control-label">Tópico</label>
-            <div class="controls">
-                <strong>Aula Manhã | Transforma Tec</strong>
-            </div>
+<body class="is-keyboard-event">
+    <div class="total-main-content">
+        <div id="skiptocontent">
+            <a href="#the-main-content" role="complementary" arial-label="skip">Ir para conteúdo principal</a>
         </div>
-        <div class="time">
-            <label for="" class="control-label">Horário</label>
-            <div class="controls">
-                <div id="registerForAll">
-                    22 abr. 10 da manhã <br>
-                    23 abr. 10 da manhã <br>
-                    24 abr. 10 da manhã <br>
-                    25 abr. 10 da manhã <br>
-                    26 abr. 10 da manhã <br>
-                    27 abr. 10 da manhã <br>
-                    28 abr. 10 da manhã <br>
-                    29 abr. 10 da manhã <br>
+        <div id="content_container">
+            <div id="content" class="main-content">
+                <div id="notice-slot"></div>
+                <div class="mini-layout support">
+                    <div class="mini-layout-body">
+                        <div id="meeting_register_container">
+                            <h1 class="offscreen">Meeting Register Page</h1>
+                            <div class="page-header custom logo" style:"position: relative;">
+                                <h2>Inscrição na Reunião</h2>
+                            </div>
+                            <div class="form-group">
+                                <div class="controls" style="text-align: center;margin-right: 20px;">
+                                    <span>
+                                        <a href="" class="share-ico ico-width" target="_blank">
+                                            <i class="ico-size glyphicon glyphicon-fb"></i>
+                                            &nbsp;
+                                            <span class="sr-only">Facebook</span>
+                                        </a>
+                                        <a href="" class="share-ico ico-width" target="_blank">
+                                            <i class="ico-size glyphicon glyphicon-tw"></i>
+                                            &nbsp;
+                                            <span class="sr-only">Twitter</span>
+                                        </a>
+                                        <a href="" class="share-ico ico-width" target="_blank">
+                                            <i class="ico-size glyphicon glyphicon-ln"></i>
+                                            &nbsp;
+                                            <span class="sr-only">LinkedIn</span>
+                                        </a>
+                                        <a href="javascript:;" class="share-ico ico-width" id="share_via_email">
+                                            <i class="ico-size glyphicon glyphicon-outlook"></i>
+                                            &nbsp;
+                                            <span class="sr-only">Microsoft (Outlook)</span>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                            <form action="javascript:;" id="meeting_register_form" class="form-vertical" autocomplete="off" method="post" novalidate="novalidate">
+                                <div style="border-bottom:solid 1px #eee;margin:20px 0;"></div>
+                                <input type="hidden" id="meeting_number">
+                                <div class="row" style="display:table">
+                                <div class="webinar_topic">
+                                    <div class="form-group horizontal">
+                                        <label for="" class="control-label">Tópico</label>
+                                        <div class="controls">
+                                            <strong>Aula Manhã | Transforma Tec</strong>
+                                        </div>
+                                    </div>
+                                    <div class="form-group horizontal">
+                                        <label for="" class="control-label">Horário</label>
+                                        <div class="controls" style="overflow-y:auto;max-height:120px;width:240px;">
+                                            <div id="registerForAll">
+                                                <input style="display: none; background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px;background-position: 98% 50%;"> 22 abr. 10 da manhã <br>
+                                                <input style="display: none"> 23 abr. 10 da manhã <br>
+                                                <input style="display: none"> 24 abr. 10 da manhã <br>
+                                                <input style="display: none"> 25 abr. 10 da manhã <br>
+                                                <input style="display: none"> 26 abr. 10 da manhã <br>
+                                                <input style="display: none"> 27 abr. 10 da manhã <br>
+                                                <input style="display: none"> 28 abr. 10 da manhã <br>
+                                                <input style="display: none"> 29 abr. 10 da manhã <br>
+                                            </div>      
+                                    </div>
+                                    <span class="controls" style="margin-right:4px;padding-top:6px;display:inline-block;">
+                                        A hora é mostrada em <button type="button" id="switch_timezone" title="Change Time Zone" href="javascript:;" aria-modal="true" role="button" aria aria-labelledby="switch_timezone webinar-timezone-title">São Paulo</button>
+                                    </span>
+                                    </div>
+                                </div>
+                                <div class="span1"></div>
+                            </div>
+                            <div style="border-bottom:solid 1px #eee;margin:20px 0;"></div>
+                            <div id="questions_container">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="question_first_name" class="control-label" id="label-question_first_name">
+                                                Nome
+                                                <i aria-label="required information">*</i>
+                                            </label>
+                                            <div class="controls">
+                                                <input type="text" id="question_first_name" name="question_first_name" class="form-control" maxlength="64">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="question_last_name" id="label-question_last_name" class="control-label">
+                                                Sobrenome
+                                                <i aria-label="required information">*</i>
+                                            </label>
+                                            <div class="controls">
+                                                <input type="text" class="form-control" id="question_last_name" maxlength="63" name="question_last_name">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="question_email" id="label-question_email" class="control-label">
+                                                Endereço de E-mail
+                                                <i aria-label="required information">*</i>
+                                            </label>
+                                            <div class="controls">
+                                                <input type="email" id="question_email" class="form-control" maxlength="128" name="question_email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="question_confirm_email" id="label-question_confirm_email" class="control-label">
+                                                Confirmar o Endereço de E-mail
+                                                <i aria-label="required information">*</i>
+                                            </label>
+                                            <div class="controls">
+                                                <input type="email" id="question_confirm_email" class="form-control" maxlength="128" name="question_confirm_email">
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            </div>
+                            <div class="form-group">
+                                <i>*</i> Informações necessárias
+                            </div>
+                        <div class="form-group" id="term">
+                                As informações fornecidas durante o registro serão compartilhadas com o <a href="https://support.zoom.us/hc/en-us/articles/360059564372-In-Product-Privacy-Notifications" target="_blank">proprietário da conta</a> e o anfitrião e podem ser usadas e compartilhadas por eles de acordo com Termos e Política de Privacidade deles.
+                            </div>
+                        <div class="form-group" style="margin-left:35px;">
+                            <div class="controls" style="padding-bottom:20px;">
+                                <a href="javascript:;" id="btnSubmit" class="btn btn-primary btn-lg submit">Inscrição</a>
+                            </div>        
+                        </div>
+                        <input type="hidden" name="ZOOM-CSRFTOKEN" value="QBFM-2ZP1-ALHE-T9PM-LBJG-6CQ5-KSGH-7RBR">
+                        </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <span class="controls">
-                A hora é mostrada em <button type="button">São Paulo</button>
-            </span>
         </div>
-    </div>
-    <hr class="solid">
-    <div class="questions_container">
-        <form action="">
-            <label for="" class="fname">Nome<i>*</i></label>
-            <input type="text">
-            <label for="" class="sname">Sobrenome<i>*</i></label>
-            <input type="text">
-            <label for="" class="email">Endereço de E-mail<i>*</i></label>
-            <input type="email">
-            <label for="" class="email">Confirmar endereço de E-mail<i>*</i></label>
-            <input type="email">
-        </form>
-        <div class="necessary">
-            <i>*</i>Informações necessárias
-        </div>
-        <div class="form-group">
-            As informações fornecidas durante o registro serão compartilhadas com o <a href="https://support.zoom.us/hc/en-us/articles/360059564372-In-Product-Privacy-Notifications" target="_blank">proprietário da conta</a> e o anfitrião e podem ser usadas e compartilhadas por eles de acordo com Termos e Política de Privacidade deles.
-        </div>
-        <div class="controls">
-            <a href="" class="btn btn-primary btn-lg submit">Inscrição</a>
-            
-        </div>
-    </div>
 </div>
     
 </body>
